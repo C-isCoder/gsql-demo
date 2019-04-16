@@ -1,3 +1,4 @@
+CREATE DATABASE db_gsql;
 DROP TABLE IF EXISTS `employee`;
 CREATE TABLE `employee`
 (
