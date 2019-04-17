@@ -131,7 +131,6 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {
 		name := r.FormValue("name")
 		city := r.FormValue("city")
-		id := r.FormValue("uid")
 		stmt, err := db.Prepare("INSERT INTO employee(name, city) VALUES(?,?)")
 		if err != nil {
 			fmt.Printf("Insert Prepare error:%v\n", err.Error())
@@ -139,7 +138,7 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 		if stmt == nil {
 			return
 		}
-		_, _ = stmt.Exec(name, city, id)
+		_, _ = stmt.Exec(name, city)
 		http.Redirect(w, r, "/", 301)
 	}
 }
