@@ -132,7 +132,7 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 		name := r.FormValue("name")
 		city := r.FormValue("city")
 		id := r.FormValue("uid")
-		stmt, err := db.Prepare("INSERT INTO Employee(name, city) VALUES(?,?)")
+		stmt, err := db.Prepare("INSERT INTO employee(name, city) VALUES(?,?)")
 		if err != nil {
 			fmt.Printf("Insert Prepare error:%v\n", err.Error())
 		}
