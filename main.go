@@ -19,7 +19,7 @@ type Employee struct {
 func dbConn() (db *sql.DB) {
 	dbDriver := "mysql"
 	dbUser := "root"
-	dbPass := "congxiaodan"
+	dbPass := ""
 	dbName := "db_gsql"
 	db, err := sql.Open(dbDriver, dbUser+":"+dbPass+"@/"+dbName)
 	if err != nil {
