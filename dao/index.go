@@ -3,6 +3,7 @@ package dao
 import (
 	"fmt"
 	"gsql-demo/database"
+	"gsql-demo/form"
 	"gsql-demo/model"
 	"net/http"
 )
@@ -31,5 +32,5 @@ func Index(w http.ResponseWriter, r *http.Request) {
 		emp.Name = name
 		res = append(res, emp)
 	}
-	_ = main.TMPL.ExecuteTemplate(w, "Index", res)
+	_ = form.Temp.ExecuteTemplate(w, "Index", res)
 }
