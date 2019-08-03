@@ -1,2 +1,2 @@
 # gsql-demo
-👾 Golang mysql demo
+👾 golang mysql demo
